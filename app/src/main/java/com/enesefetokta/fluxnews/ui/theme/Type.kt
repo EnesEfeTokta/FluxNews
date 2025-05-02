@@ -1,13 +1,13 @@
-package com.enesefetokta.fluxnews.ui.theme
+package com.enesefetokta.fluxnews.ui.theme // Paket adınız doğru olmalı
 
-import androidx.compose.material3.Typography
+import androidx.compose.material3.Typography // Doğru import
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
-val Typography = Typography(
+val Typography = Typography( // androidx.compose.material3.Typography olmalı
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,

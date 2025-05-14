@@ -33,28 +33,6 @@ import androidx.compose.ui.unit.sp
 import com.enesefetokta.fluxnews.R
 import com.enesefetokta.fluxnews.ui.theme.FluxNewsTheme
 
-class InverseArcShape(private val arcHeightDp: Float) : Shape {
-    override fun createOutline(
-        size: Size,
-        layoutDirection: LayoutDirection,
-        density: Density
-    ): Outline {
-        val arcHeight = with(density) { arcHeightDp.dp.toPx() }
-        val path = Path().apply {
-            moveTo(0f, arcHeight)
-            quadraticBezierTo(
-                x1 = size.width / 2f, y1 = -arcHeight,
-                x2 = size.width, y2 = arcHeight
-            )
-            lineTo(size.width, size.height)
-            lineTo(0f, size.height)
-            close()
-        }
-        return Outline.Generic(path)
-    }
-}
-
-
 @Composable
 fun VisualLoginScreen(
     modifier: Modifier = Modifier,
